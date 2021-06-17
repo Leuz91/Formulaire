@@ -20,78 +20,134 @@
     rel="stylesheet"
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Formulaire</title>
 </head>
 <body>
-     <div class="container">
-         <div class="row">
-             <div class="col-md-4 offset-md-4">
-                 <h1 class="text-center">FORMULAIRE</h1>
-                 <form method=""  id="form">
-                    <div class="field">
-                        <label>Nom</label>
-                        <input type="text" name="nom" id="nom" class="form-control">
-                    </div>
-                    <div class="field">
-                        <label class="control-label"  >Adresse</label>
-                        <input type="text" name="adr" id="adr" class="form-control">
-                    </div>
-                    <div class="field">
-                        <label class="control-label" for="">Email</label>
-                        <input type="email" name="email" id="email" class="form-control">
-                    </div>
-                    <div class="form-group field">
-                        <label class="control-label" for="">Mot de Passe</label>
-                        <input type="password" name="mdp" id="mdp" class="form-control">
-                    </div>
-                    <div class="form-group field">
-                        <label class="control-label" for="" id="tel">Telephone</label>
-                        <input type="tel" name="tel" class="form-control">
-                    </div>
-                    <div class="field">
-                        <label class="control-label" for="" >CHOISIR VOTRE COURS</label>
+      <!--Main Navigation-->
+  <header>
+    
+    <!-- Background image -->
+    <div id="intro" class="bg-image shadow-2-strong">
+      <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-5 col-md-8">
+              <form class="bg-white  rounded-5 shadow-5-strong p-5" id="form">
+                <!-- name input -->
+                <div class="form-outline mb-4 field">
+                  <input type="text" type="text" name="nom" id="nom" class="form-control" required=""  
+                  oninvalid="this.setCustomValidity('Veuiller saisir votre nom')" oninput="setCustomValidity('')"/>
+                  <label class="form-label" for="form1Example1">Nom</label>
+                </div>
+
+                <!-- Adresse input -->
+                <div class="form-outline mb-4">
+                  <input type="text" name="adr" id="adr" class="form-control" required=""  
+                  oninvalid="this.setCustomValidity('Veuiller saisir votre adresse')" oninput="setCustomValidity('')"/>
+                  <label class="form-label" for="form1Example1">Address</label>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" name="email" id="email" class="form-control" required=""  
+                  oninvalid="this.setCustomValidity('Veuiller saisir votre email')" oninput="setCustomValidity('')"/>
+                  <label class="form-label" for="form1Example1">Email</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input input type="password" name="mdp" id="mdp" class="form-control" required=""  
+                  oninvalid="this.setCustomValidity('Veuiller saisir votre mot de passe')" oninput="setCustomValidity('')"/>
+                  <label class="form-label" for="form1Example2">Mot de passe</label>
+                </div>
+
+                <!-- Telephone input -->
+                <div class="form-outline mb-4">
+                  <input type="text" name="tel" id="tel" class="form-control" required=""  
+                  oninvalid="this.setCustomValidity('Veuiller saisir votre numéro de téléphone')" oninput="setCustomValidity('')"/>
+                  <label class="form-label" for="form1Example1">Telephone</label>
+                </div>
+
+                <!-- Choix input -->
+                <div class="form-outline mb-4 field">
+                  <label class="control-label" for="" >CHOISIR VOTRE COURS</label>
                         <select name="choix" id="choix">
-                            <option value="1">PHP</option>
-                            <option value="2">JAVASCRIPT</option>
-                            <option value="3">BOOTSTRAP</option>
-                            <option value="4">PHOTOSHOP</option>
+                            <option value="PHP">PHP</option>
+                            <option value="Java Script">JAVASCRIPT</option>
+                            <option value="Bootstrap">BOOTSTRAP</option>
+                            <option value="Photoshop">PHOTOSHOP</option>
                         </select>
-                    </div>
-                    <div class="form-group field">
-                        <label class="control-label" for="" name="message" id="message">message</label>
-                        <textarea name="" id="tel" cols="30" rows="5"></textarea>
-                    </div>
-                    <div class="form-group ">
-                        <input type="submit" id="button" onclick="verifi()" value="Envoyer">
-                         <button type="reset">Annuler</button>
-                    </div>
+                </div>
 
-                    
+                 <!-- Message input -->
+                 <div class="form-outline mb-4 form-group field">
+                  <label class="control-label" for="" name="message" id="message">message</label>
+                        <textarea name="message" id="message" cols="50" rows="4" required=""  
+                        oninvalid="this.setCustomValidity('Veuiller saisir votre message')" oninput="setCustomValidity('')"></textarea>
+                </div>
+               
 
-                 </form>
-             </div>
-         </div>
-     </div>
+                <!-- Submit button -->
+                <input type="submit" id="button" class="btn btn-primary btn-block" value="Envoyer">
+                <button type="reset" class="btn btn-secondary btn-block">Annuler</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+  <!--Main Navigation-->
 
-     
-      
+  <!--Footer-->
+  <footer class="bg-light text-lg-start">
+    <hr class="m-0" />
+
+    <div class="text-center py-4 align-items-center">
+      <p>Suivez moi sur les réseaux sociaux</p>
+      <a href="https://www.youtube.com/" class="btn btn-primary m-1" role="button"
+        rel="nofollow" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.facebook.com/" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://github.com/Leuz91" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">Carantech.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Footer-->
 
 
-     <script src="script.js"></script>
+      <script src="script.js"></script>
 
-     <script type="text/javascript"
+      <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
       
       <script type="text/javascript">
         emailjs.init('user_Yyr9Hqugztz9BkCbciygY')
       </script>
 
-            <!-- MDB -->
-        <script
-        type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
-        ></script>
+      <!-- MDB -->
+      <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+      ></script>
 </body>
 </html>
